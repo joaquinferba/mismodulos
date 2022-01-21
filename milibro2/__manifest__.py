@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Mi libro",
+    'name': "Mi libro 2",
 
     'summary': """
         Mi primer módulo""",
@@ -24,7 +24,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-               'views/milibro_view.xml',
+               'views/milibro2_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

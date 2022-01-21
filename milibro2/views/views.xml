@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="milibro.list">
+      <field name="name">milibro list</field>
+      <field name="model">milibro.milibro</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="milibro.action_window">
+      <field name="name">milibro window</field>
+      <field name="res_model">milibro.milibro</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="milibro.action_server">
+      <field name="name">milibro server</field>
+      <field name="model_id" ref="model_milibro_milibro"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="milibro" id="milibro.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="milibro.menu_1" parent="milibro.menu_root"/>
+    <menuitem name="Menu 2" id="milibro.menu_2" parent="milibro.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="milibro.menu_1_list" parent="milibro.menu_1"
+              action="milibro.action_window"/>
+    <menuitem name="Server to list" id="milibro" parent="milibro.menu_2"
+              action="milibro.action_server"/>
+-->
+  </data>
+</odoo>
