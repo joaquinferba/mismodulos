@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="action_milibro_form">
+      <field name="name">Libro</field>
+      <field name="res_model">milibro</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Libros" id="milibro_menu" />
+    <menuitem name="Mis Libros" id="milibro_form" parent="milibro_menu" action="action_milibro_form" />
+
+    <record model="ir.ui.view" id="milibro_tree_view">
+        <field name="name">milibro.tree</field>
+        <field name="model">milibro</field>
+        <field name="arch" type="xml">
+            <tree string="Libros">
+                <field name="titulo"/>
+                <field name="paginas"/>
+                <field name="autor"/>
+                <field name="editorial"/>
+            </tree>
+        </field>
+    </record>
+
+      <record model="ir.ui.view" id="milibro_form_view">
+        <field name="name">milibro.form</field>
+        <field name="model">milibro</field>
+        <field name="arch" type="xml">
+            <form string="Libro">
+                <sheet>
+                <group colspan="4">
+                    <group colspan="2" col="2">
+                        <separator string="Información general libro" colspan="2"/>
+                        <field name="titulo"/>
+                        <field name="paginas"/>
+                    </group>
+
+                    <group colspan="2" col="2">
+                        <separator string="Información editorial" colspan="2"/>
+                        <field name="autor"/>
+                        <field name="editorial"/>
+                    </group>
+
+                </group>
+                </sheet>
+            </form>
+        </field>
+      </record>
+
+   <!-- <record model="ir.ui.view" id="milibro_form_view">
+        <field name="name">milibro.form</field>
+        <field name="model">milibro</field>
+        <field name="arch" type="xml">
+            <form string="Libros">
+                <field name="titulo"/>
+                <field name="paginas"/>
+                <field name="autor"/>
+                <field name="editorial"/>
+            </form>
+        </field>
+    </record>  -->
+    </data>
+</odoo>
