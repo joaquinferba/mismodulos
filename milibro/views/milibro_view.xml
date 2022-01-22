@@ -6,7 +6,7 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="Libros" id="milibro_menu" />
+    <menuitem name="Libros" id="milibro_menu" web_icon="milibro,static/description/icon.png"/>
     <menuitem name="Mis Libros" id="milibro_form" parent="milibro_menu" action="action_milibro_form" />
 
     <record model="ir.ui.view" id="milibro_tree_view">

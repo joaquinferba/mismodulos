@@ -1,0 +1,39 @@
+<odoo>
+  <data>
+
+      <record model="ir.actions.act_window" id="action_mirevista_form">
+      <field name="name">mirevista</field>
+      <field name="res_model">mirevista</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Revistas" id="mirevista_form" parent="milibro2.milibro2_menu" action="action_mirevista_form" />
+
+    <record model="ir.ui.view" id="milibro2_cat_tree_view">
+        <field name="name">mirevista.tree</field>
+        <field name="model">mirevista</field>
+        <field name="arch" type="xml">
+            <tree string="Revistas">
+                <field name="titulo"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="mirevista_form_view">
+        <field name="name">mirevista.form</field>
+        <field name="model">mirevista</field>
+        <field name="arch" type="xml">
+            <form string="Revistas">
+                <sheet>
+                    <group>
+                        <field name="titulo"/>
+                        <field name="categoria"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+      <!--  Aquí el submenú -->
+
+    </data>
+</odoo>

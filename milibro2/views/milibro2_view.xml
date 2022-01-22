@@ -1,7 +1,7 @@
 <odoo>
   <data>
 
-      <menuitem name="Libros 2" id="milibro2_menu" />
+      <menuitem name="Libros 2" id="milibro2_menu" icon_web="milibro2,static/description/icon.png" />
 
       <record model="ir.actions.act_window" id="action_milibro2_cat_form">
       <field name="name">milibro2_cat</field>
@@ -57,16 +57,29 @@
         <field name="model">milibro2</field>
         <field name="arch" type="xml">
             <form string="Libros">
-                <field name="titulo"/>
-                <field name="paginas"/>
-                <field name="autor"/>
-                 <field name="isbn"/>
-                 <field name="precio"/>
-                 <field name="fecha"/>
-                 <field name="revisado"/>
-                 <field name="aprobado"/>
-                 <field name="categoria"/>
-                 <field name="resumen"/>
+                <sheet>
+                    <group colspan="4" col="4">
+                        <group colspan="3" col="2">
+                            <field name="titulo"/>
+                            <field name="paginas"/>
+                            <field name="autor"/>
+                            <field name="isbn"/>
+                            <field name="precio"/>
+                        </group>
+
+                        <group colspan="1" col="2">
+                            <field name="fecha"/>
+                            <field name="revisado"/>
+                            <field name="aprobado"/>
+                            <field name="categoria"/>
+                        </group>
+                        <notebook colspan="4">
+                        <page>
+                           <field name="resumen"/>
+                        </page>
+                        </notebook>
+                </group>
+                </sheet>
             </form>
         </field>
     </record>
